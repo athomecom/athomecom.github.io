@@ -4,23 +4,15 @@
     <meta charset="UTF-8">
 
   <head>
-    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+<!--    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">-->
     
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
       
     <link href="jquery-ui.min.css" rel="stylesheet" type="text/css" />
-      
-    
-      
-      
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-    <script src="jssor.slider.min.js"></script>
+    <link rel="stylesheet" href="main.css">
       
-    <script type="text/javascript" src="script.js"></script>
-      
-      <link rel="stylesheet" href="main.css">
+    <noscript><style> .jsonly { display: none } </style></noscript>
             
       
     <script>
@@ -56,8 +48,7 @@
         </ul>
     </div>
       
-
-    <div class="images">
+    <div class="images jsonly">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -70,31 +61,27 @@
             <div class="row">
                 <div class="col-md-6">
                     
-<!--                    <input class="btn" type="submit" value="Remove Images">-->
-                    
                     <div id="slider1_container">
-                    <!-- Slides Container -->
-                
-                    <div u="slides" class="slides">
-                        <div id="slide1"><img u="image" src="pics/1.jpg" /></div>
-                        <div id="slide2"><img u="image" src="pics/2.jpg" /></div>
-                        <div id="slide3"><img u="image" src="pics/3.jpg" /></div>
-                        <div id="slide4"><img u="image" src="pics/4.jpg" /></div>
-                        <div id="slide5"><img u="image" src="pics/5.jpg" /></div>
-                        <div id="slide6"><img u="image" src="pics/6.jpg" /></div>
-                        <div id="slide7"><img u="image" src="pics/7.jpg" /></div>
-                        <div id="slide8"><img u="image" src="pics/8.jpg" /></div>
-                        <div id="slide9"><img u="image" src="pics/9.jpg" /></div>
-                        <div id="slide10"><img u="image" src="pics/10.jpg" /></div>
-                    </div>
-                    <!-- Trigger -->
-                    <script>jssor_slider1_starter('slider1_container');</script>
+                     Slides Container 
+                        <div u="slides" class="slides">
+                            <div id="slide1"><img u="image" src="pics/1.jpg" /></div>
+                            <div id="slide2"><img u="image" src="pics/2.jpg" /></div>
+                            <div id="slide3"><img u="image" src="pics/3.jpg" /></div>
+                            <div id="slide4"><img u="image" src="pics/4.jpg" /></div>
+                            <div id="slide5"><img u="image" src="pics/5.jpg" /></div>
+                            <div id="slide6"><img u="image" src="pics/6.jpg" /></div>
+                            <div id="slide7"><img u="image" src="pics/7.jpg" /></div>
+                            <div id="slide8"><img u="image" src="pics/8.jpg" /></div>
+                            <div id="slide9"><img u="image" src="pics/9.jpg" /></div>
+                            <div id="slide10"><img u="image" src="pics/10.jpg" /></div>
+                        </div>
                     </div>
                 </div>
                 
             <div class="col-md-4">
                 <select id="pic_select">
                     <option value="new_years">All</option>
+                    <option value="school">School</option>
                     <option value="easter">Easter</option>
                     <option value="christmas">Christmas</option>
                     <option value="halloween">Halloween</option>
@@ -103,13 +90,11 @@
                 <p style="margin-top: 25px" id="slideshow_description">This was the activity. We had a lot of fun. It took place on 01/01/2015 at the community center. Here is more information on it. Here is even more information on it.</p>
             </div>
         </div> 
-            
-          
        </div>
         
     </div>
       
-      <div class="container">
+      <div class="container jsonly">
       <hr></hr>
       </div>
 
@@ -225,6 +210,7 @@
                     <div class="calendar"> 
                         <div class="container">
                             <p><h2>School Calendar</h2></p>
+                        <noscript><img src="images/calendar.png" style="max-width: 1200px"></noscript>
                             <div id="datepicker"></div>
                         </div>
                     </div>
@@ -249,6 +235,8 @@
         <div class="row">
             <div class="col-md-7">
                 <h2>Directions to the school</h2>
+                
+                <noscript><img src="images/school_location.gif" style="width: 480px"></noscript>
         <iframe id="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0422198974716!2d139.2896549!3d35.675962399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60191ed60f0e30c3%3A0x5c1d79d2d6a8cdb7!2z77yh772U77yo772P772N772F77yz772D772I772P772P772M!5e0!3m2!1sen!2sjp!4v1443426688853" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         
             </div>
@@ -260,21 +248,12 @@
     </div>
         </div>
     </div>      
-          
-          
-<!--
-    <div class="calendar">
-        <div class="container">
-            <div id="datepicker"></div>
-        </div>
-    </div>
-          
-    <div class="events">
-        <div class="container">
-        </div>
-    </div>   
--->
-          
-          
+                
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="jssor.slider.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script>jssor_slider1_starter('slider1_container');</script>
   </body>
 </html>
