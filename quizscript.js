@@ -7,6 +7,11 @@ answers[2] = "Key chain";
 answers[3] = "Bus stop";
 answers[4] = "Windshield";
 
+$(document).ready(function() {
+    document.getElementById("q1_1").innerHTML = "new answer"
+    
+});
+
 function getScore(form) {
   var score = 0;
   var currElt;
