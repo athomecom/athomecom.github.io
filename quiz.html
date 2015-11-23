@@ -10,6 +10,7 @@
       
       
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="quiz.css">
       
     </head>
     
@@ -34,57 +35,123 @@
         </ul>
     </div>
     
-    <center>
-<h1>英語では」クイズ!</h1><BR>
+        <div class="container">
+    
+<h1 id="center-header">「<span id="color-red">英語では</span>」クイズ!</h1>
 <p>
 <form name="quiz">
-<p>
-<h3><b>1. <span id="q1">アフターサービス</span>は英語で?</b></h3>
-<blockquote>
-<input type="radio" name="q1" value="Elton John"><span id="q1_1">Help support</span><br>
-<input type="radio" name="q1" value="Customer service">Customer service<br>
-<input type="radio" name="q1" value="Leonard Cohen">After help<br>
-</blockquote>
-<p>
-<h3><b>2. <span>フリーダイヤル</span>は英語で？</b></h3>
-<blockquote>
-<input type="radio" name="q2" value="Toll free number">Toll free number<br>
-<input type="radio" name="q2" value="AM I?">No dail number<br>
-<input type="radio" name="q2" value="SAM I AM">Free call<br>
-</blockquote>
-<p>
-<h3><b>3. <span>キーホルダー</span>は英語で？?<br></b></h3>
-<blockquote>
-<input type="radio" name="q3" value="Key chain">Key chain<br>
-<input type="radio" name="q3" value="New Zealand">Key holder<br>
-<input type="radio" name="q3" value="America">Key leash<br>
-</blockquote>
-<p>
-<h3><b>4. <span>バス停</span>は英語で?</b></h3>
-<blockquote>
-<input type="radio" name="q4" value="Banksy">Bus meet<br>
-<input type="radio" name="q4" value="Bono">Bus location<br>
-<input type="radio" name="q4" value="Bus stop">Bus stop<br>
-</blockquote>
-<p>
-    <h3><b>5. <span>フロントグラス</span>は英語で?</b></h3>
-<blockquote>
-<input type="radio" name="q5" value="Sin City">Glass in front<br>
-<input type="radio" name="q5" value="Windshield">Windshield<br>
-<input type="radio" name="q5" value="Oh, I'm just so PRETTY.">Rear view glass<br>
-</blockquote>
-<p><b>
+<div class="radio-group">
+    <h3><b>1. <span id="q0"></span>は英語で?</b></h3>
+    
+    <div class="answer-row">
+        <input type="radio" id="0_0" name="q0">
+        <label for="0_0"><span class="label-class"></span><span id="q0_0"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="0_1" name="q0">
+        <label for="0_1"><span class="label-class"></span><span id="q0_1"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="0_2" name="q0">
+        <label for="0_2"><span class="label-class"></span><span id="q0_2"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="0_3" name="q0">
+        <label for="0_3"><span class="label-class"></span><span id="q0_3"></span></label>
+    </div>
+</div>
+    
+<div class="radio-group">
+    <h3><b>2. <span id="q1"></span>は英語で?</b></h3>
+    
+    <div class="answer-row">
+        <input type="radio" id="1_0" name="q1">
+        <label for="1_0"><span class="label-class"></span><span id="q1_0"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="1_1" name="q1">
+        <label for="1_1"><span class="label-class"></span><span id="q1_1"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="1_2" name="q1">
+        <label for="1_2"><span class="label-class"></span><span id="q1_2"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="1_3" name="q1">
+        <label for="1_3"><span class="label-class"></span><span id="q1_3"></span></label>
+    </div>
+</div>
 
+<div class="radio-group">
+    <h3><b>3. <span id="q2"></span>は英語で?</b></h3>
+    
+    <div class="answer-row">
+        <input type="radio" id="2_0" name="q2">
+        <label for="2_0"><span class="label-class"></span><span id="q2_0"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="2_1" name="q2">
+        <label for="2_1"><span class="label-class"></span><span id="q2_1"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="2_2" name="q2">
+        <label for="2_2"><span class="label-class"></span><span id="q2_2"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="2_3" name="q2">
+        <label for="2_3"><span class="label-class"></span><span id="q2_3"></span></label>
+    </div>
+</div>    
+    
+<div class="radio-group">
+    <h3><b>4. <span id="q3"></span>は英語で?</b></h3>
+    
+    <div class="answer-row">
+        <input type="radio" id="3_0" name="q3">
+        <label for="3_0"><span class="label-class"></span><span id="q3_0"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="3_1" name="q3">
+        <label for="3_1"><span class="label-class"></span><span id="q3_1"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="3_2" name="q3">
+        <label for="3_2"><span class="label-class"></span><span id="q3_2"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="3_3" name="q3">
+        <label for="3_3"><span class="label-class"></span><span id="q3_3"></span></label>
+    </div>
+</div>
+    
+    <div class="radio-group bottom-group">
+    <h3><b>5. <span id="q4"></span>は英語で?</b></h3>
+    
+    <div class="answer-row">
+        <input type="radio" id="4_0" name="q4">
+        <label for="4_0"><span class="label-class"></span><span id="q4_0"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="4_1" name="q4">
+        <label for="4_1"><span class="label-class"></span><span id="q4_1"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="4_2" name="q4">
+        <label for="4_2"><span class="label-class"></span><span id="q4_2"></span></label>
+    </div>
+    <div class="answer-row">
+        <input type="radio" id="4_3" name="q4">
+        <label for="4_3"><span class="label-class"></span><span id="q4_3"></span></label>
+    </div>
+</div>
+
+    
 <input type="button" value="Get score" onClick="getScore(this.form)">
 <input type="reset" value="Clear"><p>
 Score = <input type=text size=15 name="percentage"><br>
-Correct answers:<br></font>
-<textarea name="solutions" wrap="virtual" rows="4" cols="25"></textarea>
 </form>
-<p>
-    
-    
-    
+</div>
+            
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="quizscript.js"></script>
     

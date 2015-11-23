@@ -1,0 +1,48 @@
+.answer-row {
+    margin-left: 25px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label {
+    color: black;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+input[type="radio"] + label .label-class {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label .label-class {
+     background-color: black;
+}
+
+input[type="radio"]:checked + label .label-class {
+     background-color: orange;
+}
+
+input[type="radio"] + label .label-class,
+input[type="radio"]:checked + label .label-class {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+.radio-group {
+    padding-top: 30px;
+}
+
+.bottom-group {
+    padding-bottom: 50px;
+}
+

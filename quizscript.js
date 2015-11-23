@@ -1,6 +1,11 @@
 var numQues = 5;
 var numChoi = 3;
 
+var numberOfQuestions = 5;
+var numberOfChoices = 4;
+
+var answersArray = new Array(10);
+
 var answers = new Array(49);
 var questions = new Array(49);
 
@@ -106,41 +111,100 @@ questions[47] = "Yシャツ";
 questions[48] = "ズボン";
 
 function changeQuestions() {
-    var randomNum = Math.floor(Math.random() * 49);
     
-//    document.getElementById("q1_1").innerHTML = answers[randomNum];
-    document.getElementById("q1_1").innerHTML = answers[0][1];
-    document.getElementById("q1").innerHTML = questions[randomNum];
+    
+//    console.log(orderArray.toString());
+//    
+//    console.log("index of 1: " + orderArray.indexOf(1));
+    
+    for (var i = 0; i < numberOfQuestions; i++) {
+        var randomNum = Math.floor(Math.random() * 49);
+        var orderArray = shuffle([0,1,2,3]);
+        
+        document.getElementById("q" + i.toString()).innerHTML = questions[randomNum];
+        
+        for (var j = 0; j < numberOfChoices; j++) {
+            var elementId = "q" + i.toString() + "_" + j.toString();
+            
+            document.getElementById(elementId).innerHTML = answers[randomNum][orderArray[j]];
+        }
+        
+        answersArray[i] = i.toString() + "_" + orderArray.indexOf(0).toString();
+    }
+    
+//    document.getElementById("q1_0").innerHTML = answers[randomNum][orderArray[0]];
+//    document.getElementById("q1_1").innerHTML = answers[randomNum][orderArray[1]];
+//    document.getElementById("q1_2").innerHTML = answers[randomNum][orderArray[2]];
+//    document.getElementById("q1_3").innerHTML = answers[randomNum][orderArray[3]];
+//    document.getElementById("q1").innerHTML = questions[randomNum];
 }
 
 $(document).ready(function () {
     changeQuestions();
 });
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex ;
+
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
 
 
 function getScore(form) {
-  var score = 0;
-  var currElt;
-  var currSelection;
-  for (i=0; i<numQues; i++) {
-    currElt = i*numChoi;
-    for (j=0; j<numChoi; j++) {
-      currSelection = form.elements[currElt + j];
-      if (currSelection.checked) {
-        if (currSelection.value == answers[i]) {
-          score++;
-          break;
+    var score = 0;
+    
+    for (var i = 0; i < numberOfQuestions; i++) {
+        document.getElementById("q" + answersArray[i].toString()).style.backgroundColor = "lightgreen";
+        if (document.getElementById(answersArray[i]).checked) {
+            console.log("Answer: " + i + " is CORRECT");
+        } else {
+            console.log("Answer: " + i + " is INCORRECT");
         }
-      }
     }
-  }
-
-  score = Math.round(score/numQues*100);
-  form.percentage.value = score + "%";
-  var correctAnswers = "";
-  for (i=1; i<=numQues; i++) {
-    correctAnswers += i + ". " + answers[i-1] + "\r\n";
-  }
-  form.solutions.value = correctAnswers;
+    
+    console.log("answersArray: " + answersArray.toString());
+    
+    for (var i = 0; i < numberOfQuestions; i++) {
+        for (var j = 0; j < numberOfChoices; j++) {
+            var elementId = i.toString() + "_" + j.toString();
+            
+            if (document.getElementById(elementId).checked &&answersArray.indexOf(elementId) == -1) {
+                document.getElementById("q" + elementId).style.backgroundColor = "red";   
+            }
+        }
+    }
+    
+    
+//  var score = 0;
+//  var currElt;
+//  var currSelection;
+//  for (i=0; i<numQues; i++) {
+//    currElt = i*numChoi;
+//    for (j=0; j<numChoi; j++) {
+//      currSelection = form.elements[currElt + j];
+//      if (currSelection.checked) {
+//        if (currSelection.value == answers[i]) {
+//          score++;
+//          break;
+//        }
+//      }
+//    }
+//  }
+//
+//  score = Math.round(score/numQues*100);
+//  form.percentage.value = score + "%";
+//  var correctAnswers = "";
+//  for (i=1; i<=numQues; i++) {
+//    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+//  }
+//  form.solutions.value = correctAnswers;
 }
