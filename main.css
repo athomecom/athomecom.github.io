@@ -2,6 +2,35 @@ html {
     background-color: white;
 }
 
+.top-buffer {
+    margin-top: 20px;
+}
+
+.color_thumbnail {
+    padding-top: 15px;
+    max-width: 85%;
+    height: auto;
+    padding-left: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coloring-group h2, .worksheet-group h1 {
+    font-size: 200%;
+    color: green;
+}
+
+.coloring-group, .worksheet-group {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.thumbnail-grouping h5 {
+    width: 100%;
+    font-size: 150%;
+    text-align: center;
+}
+
 div.ui-datepicker{
  font-size:25px;
 }
@@ -94,8 +123,9 @@ h3 span {
   }  
 
 .access_main {
-    margin-top: 50px;
+    padding-top: 50px;
     margin-bottom: 50px;
+    background-color: #f7f7f7;
 }
 
 .images {
@@ -217,9 +247,10 @@ hr {
 }
 
 .jumbotron {
-/*  background-image:url('http://goo.gl/04j7Nn');*/
-/*    background-image:url('images/jumbotron_background.png');*/
-    background-image: url('images/jumbotron2.jpg');
+
+/*    background-image: url('images/jumbotron2.jpg');*/
+    background-color: orange;
+    
   height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -274,3 +305,23 @@ hr {
 .events {
     height:500px;
 }
+
+
+.thumbnail-grouping {
+/*    border: 1px solid green;*/
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.footer {
+    width: 100%;
+    background-color: orange;
+    height: 50px;
+}
+
+.footer h3 {
+    text-align: center;
+    padding-top: 15px;
+}
+
