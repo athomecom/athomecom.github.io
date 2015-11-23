@@ -46,3 +46,13 @@ input[type="radio"]:checked + label .label-class {
     padding-bottom: 50px;
 }
 
+#percentage {
+    margin-bottom: 50px;
+}
+
+
+
+
+#score-div {
+    margin-top: 20px;
+}

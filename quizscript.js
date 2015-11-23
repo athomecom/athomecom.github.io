@@ -1,6 +1,3 @@
-var numQues = 5;
-var numChoi = 3;
-
 var numberOfQuestions = 5;
 var numberOfChoices = 4;
 
@@ -158,6 +155,23 @@ function shuffle(array) {
   return array;
 }
 
+function newQuestions() {
+    // Reset all highlights
+    for (var i = 0; i < numberOfQuestions; i++) {
+        for (var j = 0; j < numberOfChoices; j++) {
+            var elementId = i.toString() + "_" + j.toString();
+            
+            document.getElementById("q" + elementId).style.backgroundColor = "transparent";
+            document.getElementById(elementId).checked = false;
+        }
+    }
+    
+    // Clear score box
+    document.getElementById("percentage").value = "";
+    
+    // Change the questions
+    changeQuestions();
+}
 
 function getScore(form) {
     var score = 0;
@@ -165,13 +179,9 @@ function getScore(form) {
     for (var i = 0; i < numberOfQuestions; i++) {
         document.getElementById("q" + answersArray[i].toString()).style.backgroundColor = "lightgreen";
         if (document.getElementById(answersArray[i]).checked) {
-            console.log("Answer: " + i + " is CORRECT");
-        } else {
-            console.log("Answer: " + i + " is INCORRECT");
+            score++;
         }
     }
-    
-    console.log("answersArray: " + answersArray.toString());
     
     for (var i = 0; i < numberOfQuestions; i++) {
         for (var j = 0; j < numberOfChoices; j++) {
@@ -183,28 +193,6 @@ function getScore(form) {
         }
     }
     
-    
-//  var score = 0;
-//  var currElt;
-//  var currSelection;
-//  for (i=0; i<numQues; i++) {
-//    currElt = i*numChoi;
-//    for (j=0; j<numChoi; j++) {
-//      currSelection = form.elements[currElt + j];
-//      if (currSelection.checked) {
-//        if (currSelection.value == answers[i]) {
-//          score++;
-//          break;
-//        }
-//      }
-//    }
-//  }
-//
-//  score = Math.round(score/numQues*100);
-//  form.percentage.value = score + "%";
-//  var correctAnswers = "";
-//  for (i=1; i<=numQues; i++) {
-//    correctAnswers += i + ". " + answers[i-1] + "\r\n";
-//  }
-//  form.solutions.value = correctAnswers;
+    var percentage = Math.round(score / numberOfQuestions * 100);
+    form.percentage.value = score + " / " + numberOfQuestions + " (" + percentage + "%" + ")";
 }
