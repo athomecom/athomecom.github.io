@@ -2,6 +2,7 @@ var numberOfQuestions = 5;
 var numberOfChoices = 4;
 
 var answersArray = new Array(10);
+var questionsIndexArray = new Array(10);
 
 var answers = new Array(49);
 var questions = new Array(49);
@@ -108,14 +109,19 @@ questions[47] = "Yシャツ";
 questions[48] = "ズボン";
 
 function changeQuestions() {
-    
-    
 //    console.log(orderArray.toString());
 //    
 //    console.log("index of 1: " + orderArray.indexOf(1));
     
     for (var i = 0; i < numberOfQuestions; i++) {
-        var randomNum = Math.floor(Math.random() * 49);
+        var randomNum = 0;
+        
+        do {
+            randomNum = Math.floor(Math.random() * 49);
+        } while (questionsIndexArray.indexOf(randomNum) !== -1);
+        
+        questionsIndexArray[i] = randomNum;
+        
         var orderArray = shuffle([0,1,2,3]);
         
         document.getElementById("q" + i.toString()).innerHTML = questions[randomNum];
@@ -128,12 +134,6 @@ function changeQuestions() {
         
         answersArray[i] = i.toString() + "_" + orderArray.indexOf(0).toString();
     }
-    
-//    document.getElementById("q1_0").innerHTML = answers[randomNum][orderArray[0]];
-//    document.getElementById("q1_1").innerHTML = answers[randomNum][orderArray[1]];
-//    document.getElementById("q1_2").innerHTML = answers[randomNum][orderArray[2]];
-//    document.getElementById("q1_3").innerHTML = answers[randomNum][orderArray[3]];
-//    document.getElementById("q1").innerHTML = questions[randomNum];
 }
 
 $(document).ready(function () {

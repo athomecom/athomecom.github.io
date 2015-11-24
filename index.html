@@ -52,14 +52,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h3 id="slideshow_name"><b>All activities</b></h3>
+                    <center><h2 id="slideshow_name"><b>All activities</b></h2></center>
                     
                 </div>
             </div>
             
             <div class="row">
-                <div class="col-md-6">
-                    
+                <div class="col-md-8 col-sm-10">
+                    <div style="width: 100%">
                     <div id="slider1_container">
                      Slides Container 
                         <div u="slides" class="slides">
@@ -74,6 +74,7 @@
                             <div id="slide9"><img u="image" src="pics/9.jpg" /></div>
                             <div id="slide10"><img u="image" src="pics/10.jpg" /></div>
                         </div>
+                    </div>
                     </div>
                 </div>
                 
@@ -101,9 +102,14 @@
     <div class="learn-more">
 	  <div class="container">
 		<div class="row">
-	  	  <div class="col-md-6"> 
+            
+            <!-- Space for small screen sizes -->
+            <div class="col-sm-2 visible-sm">
+            </div>
+            
+	  	  <div class="col-md-6 col-sm-8"> 
 			<h2>Children Classes</h2>
-            <img src="pics/1.jpg" class="float-left-image" />
+            <img src="pics/1.jpg" class="float-left-image" style="width: 150px" />
 			<p class="float-right-text">ゲーム、クラフト作り、歌などを通して自然に自信を持って話せるようになります。 クラスを通じて、 創造力を高め、いろんな感覚を刺激し、言葉の世界を広げることもできます。<BR><BR>お母さんと一緒のクラスも随時開講致します。 興味のある方はお気軽にご連絡を。</p>
                 <a href="kids.html" class="clear-both">体験レッスンを申し込み</a>
                 <BR>
@@ -153,9 +159,18 @@
                     </table>
                 
 		  </div>
-		  <div class="col-md-6">
+                
+          <!-- Right space clears row -->
+          <div class="col-sm-12 visible-sm">
+          </div> 
+                
+          <!-- Space for small screen sizes -->
+          <div class="col-sm-2 visible-sm">
+          </div>
+                
+		  <div class="col-md-6 col-sm-8">
 			<h2>Adult Classes</h2>
-              <img src="pics/2.jpg" class="float-left-image" />
+              <img src="pics/2.jpg" class="float-left-image" style="width: 150px;"/>
 			<p class="float-right-text">日常会話、ビジネス、TOEICなど、それぞれのニーズに合った授業を行います。状況にあわせたロールプレイ、興味のあるニュース、物語などの教材を使って授業を行います。
 　少人数のセミプライベートレッスンも行っていますので、お友達だけや夫婦だけでレッスンをといった方もご相談ください。<BR><BR>
 
@@ -205,25 +220,28 @@
     <div class="info">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 hidden-sm">
-                    <div class="sakura-image" style="margin-top: 100px">
+                <div class="col-sm-3 hidden-xs jsonly" style="margin-top: 75px">
                         <img src="images/sakura.gif" class="img-responsive"/>
-                    </div>
                 </div>
                 
-                <div class="col-xs-6">
+                <div class="col-sm-6">
                     <div class="calendar"> 
-                        <div class="container">
-                            <p><h2>School Calendar</h2></p>
+<!--                        <div class="container">-->
+                            <p><h2 style="width: 50%; margin: auto">School Calendar</h2></p>
+                        
                         <noscript><img src="images/calendar.png" style="max-width: 1200px"></noscript>
-                            <div id="datepicker"></div>
-                        </div>
+                        
+                            <div id="datepicker" style="margin: auto; width: 50%;"></div>
+<!--                        </div>-->
                     </div>
                     
                 </div>
+            
+            <div class="col-sm-1 hidden-xs">
+            </div>
                 
-            <div class="col-md-3 hidden-sm">
-                    <div class="sakura-image" style="margin-top: 100px">
+            <div class="col-md-2 col-sm-3 hidden-xs jsonly">
+                    <div class="sakura-image" style="margin-top: 75px">
                         <img src="images/sakura.gif" class="img-responsive"/>
                     </div>
                 </div>
