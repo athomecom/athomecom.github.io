@@ -25,10 +25,12 @@ height: 100%;
 .color_thumbnail {
     padding-top: 15px;
     max-width: 85%;
-    height: auto;
+/*    height: auto;*/
+    height: 150px;
     padding-left: 25px;
     margin-left: auto;
     margin-right: auto;
+    display: block;
 }
 
 .coloring-group h2, .worksheet-group h1 {
@@ -331,6 +333,7 @@ hr {
 .thumbnail-grouping {
 /*    border: 1px solid green;*/
     height: auto;
+    margin-top: 15px;
     width: 100%;
     border: 1px solid black;
 }
